@@ -1,0 +1,35 @@
+[package]
+name = "wireplumber"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+libc = "0.2"
+libspa-sys = "0.8.0"
+pipewire-sys = "0.8.0"
+
+[dependencies.ffi]
+package = "wp-sys"
+path = "./wireplumber-sys/"
+
+[dependencies.glib]
+package = "glib"
+git = "https://github.com/gtk-rs/gtk-rs-core"
+
+[dependencies.gobject]
+package = "gobject-sys"
+git = "https://github.com/gtk-rs/gtk-rs-core"
+
+[dependencies.gio]
+package = "gio"
+git = "https://github.com/gtk-rs/gtk-rs-core"
+
+[package.metadata.docs.rs]
+all-features = true
+# For build.rs scripts
+rustc-args = ["--cfg", "docsrs"]
+# For rustdoc
+rustdoc-args = ["--cfg", "docsrs"]
+
+[features]
+v0_5_6 = ["ffi/v0_5_6"]

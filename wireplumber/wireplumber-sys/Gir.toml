@@ -1,0 +1,10 @@
+[options]
+library = "Wp"
+version = "0.5"
+min_cfg_version = "0.5"
+target_path = "."
+girs_directories = ["../../gir-files/", "../../"]
+work_mode = "sys"
+single_version_file = true
+
+external_libraries = ["GLib", "GObject", "Gio"]
